@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "753159959429",
+    "project_id": "techmarket-daf11",
+    "storage_bucket": "techmarket-daf11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753159959429:android:9fedc81e51fa695740caec",
+        "android_client_info": {
+          "package_name": "com.example.techmarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753159959429-pvfn83425k09iuf2gcsnivgg6br56hjl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.techmarket",
+            "certificate_hash": "b84f46d4201283df877ed0b05dbbfaf582f33858"
+          }
+        },
+        {
+          "client_id": "753159959429-j2504hauv9aag03t52nodurjur13c4g6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEtDlN0_iHWyeo-aASws4onQhBnU9D5rg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753159959429-j2504hauv9aag03t52nodurjur13c4g6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
