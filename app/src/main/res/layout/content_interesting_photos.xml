@@ -49,6 +49,18 @@
         app:layout_constraintTop_toBottomOf="@+id/dateTakenTextView"
         tools:srcCompat="@tools:sample/avatars"/>
 
+    <Button
+        android:id="@+id/goHomeBtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.188"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titleTextView"
+        app:layout_constraintVertical_bias="0.918" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
@@ -63,10 +75,10 @@
         app:layout_constraintTop_toTopOf="@+id/titleTextView" />
 
     <Button
-        android:id="@+id/goHomeBtn"
+        android:id="@+id/savePhotoBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go Home"
+        android:text="Save Photo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.638"
@@ -74,17 +86,4 @@
         app:layout_constraintTop_toTopOf="@+id/titleTextView"
         app:layout_constraintVertical_bias="0.918" />
 
-    <Button
-        android:id="@+id/savePhotoBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
-        android:text="Save Photo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.231"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/titleTextView"
-        app:layout_constraintVertical_bias="0.918"
-        app:rippleColor="#DC3B3B" />
 </androidx.constraintlayout.widget.ConstraintLayout>
