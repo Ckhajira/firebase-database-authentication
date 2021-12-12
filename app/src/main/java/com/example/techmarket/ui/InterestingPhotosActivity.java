@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 
+import com.example.techmarket.Constants;
 import com.example.techmarket.R;
 import com.example.techmarket.models.InterestingPhoto;
 import com.google.android.material.snackbar.Snackbar;
@@ -16,10 +17,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.navigation.ui.AppBarConfiguration;
 
 import com.example.techmarket.databinding.ActivityInterestingPhotosBinding;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -29,11 +33,26 @@ import butterknife.ButterKnife;
 public class InterestingPhotosActivity extends AppCompatActivity {
     @BindView(R.id.goHomeBtn)
     Button goHomeBtn;
+    @BindView(R.id.savePhotoBtn) Button savePhotoBtn;
     private AppBarConfiguration appBarConfiguration;
     private ActivityInterestingPhotosBinding binding;
 
+    private InterestingPhoto mPhoto;
+
+
     List<InterestingPhoto> interestingPhotoList;
     int currPhotoIndex = -1;
+    
+    public InterestingPhoto SinglePhoto (List<InterestingPhoto> interestingPhotoList)
+
+    {
+        for (int i=0; i<interestingPhotoList.size(); i++) {
+            return interestingPhotoList.get(currPhotoIndex);
+        }
+
+        return null;
+    }
+
 
 
     @Override
@@ -52,6 +71,16 @@ public class InterestingPhotosActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        savePhotoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatabaseReference restaurantRef = FirebaseDatabase
+                        .getInstance()
+                        .getReference(Constants.FIREBASE_CHILD_PHOTOS);
+                restaurantRef.push().setValue(SinglePhoto(interestingPhotoList));
+                Toast.makeText(InterestingPhotosActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
         binding.fab.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +93,7 @@ public class InterestingPhotosActivity extends AppCompatActivity {
         });
         PaintingActivity flickrAPI = new PaintingActivity(this);
         flickrAPI.fetchInterestingPhotos();
+
     }
 
     public void receivedInterestingPhotos(List<InterestingPhoto> interestingPhotoList){

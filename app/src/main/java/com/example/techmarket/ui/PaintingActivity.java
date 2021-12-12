@@ -104,6 +104,7 @@ public class PaintingActivity {
 
             return interestingPhotoList;
         }
+
         private InterestingPhoto parseInterestingPhoto(JSONObject singlePhotoObject){
             InterestingPhoto interestingPhoto = null;
             try{
@@ -119,6 +120,7 @@ public class PaintingActivity {
             return interestingPhoto;
 
         }
+      
 
         @Override
         protected void onPostExecute(List<InterestingPhoto> interestingPhotos) {
