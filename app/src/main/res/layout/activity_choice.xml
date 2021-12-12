@@ -22,4 +22,11 @@
         android:layout_below="@id/marketPlaceBtnView"
         android:layout_centerHorizontal="true"/>
 
+    <Button
+        android:id="@+id/SavedPhotosBtnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saved Photos"
+        android:layout_below="@id/FlickrBtnView"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

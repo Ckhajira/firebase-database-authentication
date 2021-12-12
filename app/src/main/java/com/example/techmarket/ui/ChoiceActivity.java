@@ -15,6 +15,7 @@ import butterknife.ButterKnife;
 public class ChoiceActivity extends AppCompatActivity {
         @BindView(R.id.marketPlaceBtnView) Button marketPlaceBtn;
     @BindView(R.id.FlickrBtnView) Button flickrBtn;
+    @BindView(R.id.SavedPhotosBtnView) Button SavedPhotosBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +33,13 @@ public class ChoiceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ChoiceActivity.this, InterestingPhotosActivity.class );
+                startActivity(intent);
+            }
+        });
+        SavedPhotosBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ChoiceActivity.this, SavedPhotosActivity.class );
                 startActivity(intent);
             }
         });
