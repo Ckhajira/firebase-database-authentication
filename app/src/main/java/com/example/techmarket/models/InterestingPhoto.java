@@ -6,6 +6,10 @@ public class InterestingPhoto {
     String dateTaken;
     String photoURL;
 
+    public InterestingPhoto(){
+
+    }
+
     public InterestingPhoto(String id, String title, String dateTaken, String photoURL) {
         this.id = id;
         this.title = title;
