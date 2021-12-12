@@ -69,5 +69,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-firestore:24.0.0'
-    implementation 'com.firebaseui:firebase-ui-database'
+    implementation 'com.firebaseui:firebase-ui-database:7.1.1'
 }
