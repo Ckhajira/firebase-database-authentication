@@ -28,7 +28,8 @@
         />
 
 
-<!--    <LinearLayout-->
+    <LinearLayout
+
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -76,11 +77,13 @@
             android:id="@+id/registerTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+
+            android:layout_centerInParent="true"
             android:layout_marginTop="20dp"
             android:text="Don't have an account? Sign up here!"
             android:textColor="@color/colorTextIcons"
             android:textSize="18sp"
-            android:textStyle="bold" />
-<!--    </LinearLayout>-->
+            android:textStyle="bold"
+            android:layout_above="@+id/appNameTextView"/>
+    </LinearLayout>
 </RelativeLayout>
