@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,6 +27,8 @@ import com.squareup.picasso.Picasso;
 import org.parceler.Parcels;
 
 import java.util.ArrayList;
+
+import butterknife.BindView;
 
 ////package com.example.techmarket.adapters;
 ////
@@ -205,13 +208,13 @@ public class FirebasePhotoViewHolder extends RecyclerView.ViewHolder implements 
         ImageView photoImageView = (ImageView) mView.findViewById(R.id.imgPhoto);
         TextView titleTextView = (TextView) mView.findViewById(R.id.title);
         TextView dateTextView = (TextView) mView.findViewById(R.id.date);
-        TextView urlTextView = (TextView) mView.findViewById(R.id.url);
+      //  TextView urlTextView = (TextView) mView.findViewById(R.id.url);
 
        // Picasso.get().load(restaurant.getImageUrl()).into(restaurantImageView);
 
         titleTextView.setText(photo.getTitle());
         dateTextView.setText(photo.getDateTaken());
-        urlTextView.setText(photo.getPhotoURL());
+      //  urlTextView.setText(photo.getPhotoURL());
         Picasso.get().load(photo.getPhotoURL()).into(photoImageView);
     }
 

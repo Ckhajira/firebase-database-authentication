@@ -4,28 +4,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity"
-    android:background="#000000">
 
+    android:background="@color/purple_200">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/background" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="We sell the best paintings and deliver to your doorstep"
-        android:layout_marginTop="35dp"
-        android:id="@+id/appNameTextView"
-        android:textColor="@color/purple_700"
-        android:textSize="20sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="90dp"
-        android:textStyle="bold"
-        />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="We sell the best paintings and deliver at the comfort of your home"
+    android:textStyle="bold"
+    android:textSize="30sp"
+    android:layout_margin="20dp"
+    />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/background" />-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="We sell the best paintings and deliver to your doorstep"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:id="@+id/appNameTextView"-->
+<!--        android:textColor="@color/purple_700"-->
+<!--        android:textSize="20sp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginLeft="90dp"-->
+<!--        android:textStyle="bold"-->
+<!--        />-->
 
 
     <LinearLayout
@@ -34,18 +42,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:background="@color/purple_200"
         android:orientation="vertical"
         android:padding="30dp">
 
 
         <EditText
             android:id="@+id/emailEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_above="@+id/passwordEditText"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="10dp"
             android:background="@color/colorTextIcons"
             android:hint="Enter Email"
             android:inputType="textWebEmailAddress"
@@ -53,8 +60,8 @@
 
         <EditText
             android:id="@+id/passwordEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_above="@+id/loginButton"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="10dp"
@@ -104,3 +111,4 @@
             android:visibility="gone" />
     </LinearLayout>
 </RelativeLayout>
+
