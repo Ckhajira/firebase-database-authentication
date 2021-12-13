@@ -97,6 +97,8 @@ import com.example.techmarket.adapters.FirebasePhotoViewHolder;
 import com.example.techmarket.models.InterestingPhoto;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -120,7 +122,10 @@ public class SavedPhotosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recycler2);
         ButterKnife.bind(this);
 
-        mPhotoReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_PHOTOS);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid();
+
+        mPhotoReference = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_PHOTOS).child(uid);
         setUpFirebaseAdapter();
 //        hideProgressBar();
         showRestaurants();

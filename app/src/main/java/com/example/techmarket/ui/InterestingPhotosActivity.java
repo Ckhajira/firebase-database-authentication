@@ -22,6 +22,8 @@ import android.widget.Toast;
 import androidx.navigation.ui.AppBarConfiguration;
 
 import com.example.techmarket.databinding.ActivityInterestingPhotosBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -74,10 +76,20 @@ public class InterestingPhotosActivity extends AppCompatActivity {
         savePhotoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                String uid = user.getUid();
+
                 DatabaseReference restaurantRef = FirebaseDatabase
                         .getInstance()
-                        .getReference(Constants.FIREBASE_CHILD_PHOTOS);
-                restaurantRef.push().setValue(SinglePhoto(interestingPhotoList));
+                        .getReference(Constants.FIREBASE_CHILD_PHOTOS)
+                        .child(uid);
+                DatabaseReference pushRef = restaurantRef.push();
+                String pushId= pushRef.getKey();
+//                mPhoto.setPushId(pushId);
+//                pushRef.setValue(mPhoto);
+                SinglePhoto(interestingPhotoList).setPushId(pushId);
+                pushRef.setValue(SinglePhoto(interestingPhotoList));
+               // restaurantRef.push().setValue(SinglePhoto(interestingPhotoList));
                 Toast.makeText(InterestingPhotosActivity.this, "Saved", Toast.LENGTH_SHORT).show();
             }
         });

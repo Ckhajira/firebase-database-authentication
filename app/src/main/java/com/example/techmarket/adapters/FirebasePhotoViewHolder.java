@@ -14,6 +14,8 @@ import com.example.techmarket.models.InterestingPhoto;
 import com.example.techmarket.ui.AllProductsActivity;
 import com.example.techmarket.ui.SavedPhotosActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -214,7 +216,9 @@ public class FirebasePhotoViewHolder extends RecyclerView.ViewHolder implements 
     @Override
     public void onClick(View view) {
         final ArrayList<InterestingPhoto> photos = new ArrayList<>();
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_PHOTOS);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uid = user.getUid();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(Constants.FIREBASE_CHILD_PHOTOS).child(uid);
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override

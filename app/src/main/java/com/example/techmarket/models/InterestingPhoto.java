@@ -2,6 +2,7 @@ package com.example.techmarket.models;
 
 public class InterestingPhoto {
     String id;
+    private String pushId;
     String title;
     String dateTaken;
     String photoURL;
@@ -55,5 +56,13 @@ public class InterestingPhoto {
 
     public void setPhotoURL(String photoURL) {
         this.photoURL = photoURL;
+    }
+
+    public String getPushId() {
+        return pushId;
+    }
+
+    public void setPushId(String pushId) {
+        this.pushId = pushId;
     }
 }
