@@ -1,6 +1,6 @@
 ## Tech Market App
 
-This is an Android app that provides a marketplace for paintings and hard-copy photos , 07/12/2021.
+This is an Android app that provides a marketplace for paintings and hard-copy photos , 13/12/2021.
 
 By Khajira Christopher
 
@@ -16,7 +16,7 @@ He is then presented with the form for delivery which requires the name, address
    - INPUT: "Fill the email and password form"
    - OUTPUT: "User is directed to the choices page"
    
-2.  Displays two buttons: button for MarketPlace and Button for Flickr Inspiration
+2.  Displays three buttons: button for MarketPlace, Button for Flickr Inspiration and Button for saved Photos
    - INPUT: "Market Place Button or Flickr Button"
    - OUTPUT: "If Market Place Button": 
    i) Displays a list view with the list of the paintings
@@ -37,7 +37,7 @@ He is then presented with the form for delivery which requires the name, address
    - Input: "More Info button"
    - Output: "Website url that uses implicit intent to redirect user to an outside source"
    
-3. Displays two buttons: button for MarketPlace and Button for Flickr Inspiration
+3. Displays three buttons: button for MarketPlace, Button for Flickr Inspiration and Button for saved photos
    - INPUT: "Market Place Button or Flickr Button"
    - OUTPUT: "If Flickr Button"
    i) Displays title, name and photo fetched from FLickr throgh Flick API. Next button goes to next photo
