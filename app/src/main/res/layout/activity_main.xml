@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,13 +6,13 @@
     tools:context=".ui.MainActivity"
     android:background="#000000">
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/background" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,39 +26,61 @@
         android:layout_marginLeft="90dp"
         android:textStyle="bold"
         />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/locationEditText"
-        android:background="@color/colorTextIcons"
-        android:layout_above="@+id/passwordEditText"
-        android:layout_marginBottom="10dp"
-        android:padding="5dp"
-        android:hint="Enter Email"
-        android:inputType="textWebEmailAddress"
-        android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/passwordEditText"
-        android:background="@color/colorTextIcons"
-        android:layout_above="@+id/loginButton"
-        android:layout_marginBottom="10dp"
-        android:padding="5dp"
-        android:hint="Enter Password"
-        android:inputType="textPassword"
-        android:layout_centerHorizontal="true" />
 
-    <Button
+<!--    <LinearLayout-->
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/loginButton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/colorAccent"
-        android:textColor="@color/colorTextIcons" />
+        android:layout_centerInParent="true"
+        android:background="@color/purple_200"
+        android:orientation="vertical"
+        android:padding="30dp">
 
 
+        <EditText
+            android:id="@+id/locationEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/passwordEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:background="@color/colorTextIcons"
+            android:hint="Enter Email"
+            android:inputType="textWebEmailAddress"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/loginButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorTextIcons"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:padding="5dp" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorAccent"
+            android:text="Login"
+            android:textColor="@color/colorTextIcons" />
+
+        <TextView
+            android:id="@+id/registerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Don't have an account? Sign up here!"
+            android:textColor="@color/colorTextIcons"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+<!--    </LinearLayout>-->
 </RelativeLayout>
