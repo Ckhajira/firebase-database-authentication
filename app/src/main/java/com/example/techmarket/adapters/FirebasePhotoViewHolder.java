@@ -21,6 +21,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import org.parceler.Parcels;
 
@@ -211,6 +212,7 @@ public class FirebasePhotoViewHolder extends RecyclerView.ViewHolder implements 
         titleTextView.setText(photo.getTitle());
         dateTextView.setText(photo.getDateTaken());
         urlTextView.setText(photo.getPhotoURL());
+        Picasso.get().load(photo.getPhotoURL()).into(photoImageView);
     }
 
     @Override
